@@ -1,0 +1,51 @@
+name: Data Issue
+description: Wrong points, missing units, incorrect abilities, etc.
+title: "[Data]: "
+labels: ["data"]
+body:
+  - type: dropdown
+    id: tracker
+    attributes:
+      label: Which tracker?
+      options:
+        - "AoS (aos.warscribe.app)"
+        - "40k (40k.warscribe.app)"
+        - "Spearhead (spearhead.warscribe.app)"
+        - "The Old World (tow.warscribe.app)"
+        - "Path to Glory (ptg.warscribe.app)"
+    validations:
+      required: true
+
+  - type: input
+    id: faction
+    attributes:
+      label: Faction
+      placeholder: "e.g. Skaven, Space Marines"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong?
+      description: Describe the data issue — wrong points, missing unit, incorrect ability text, etc.
+      placeholder: "e.g. Clanrats show 100 pts but should be 80 pts"
+    validations:
+      required: true
+
+  - type: textarea
+    id: army-list
+    attributes:
+      label: Army list (paste here)
+      description: If relevant, paste the list that shows the issue
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshots
+      description: Screenshots showing the incorrect data vs what it should be
+    validations:
+      required: false

@@ -1,0 +1,43 @@
+name: Feature Request
+description: Suggest an improvement or new feature
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: tracker
+    attributes:
+      label: Which tracker?
+      options:
+        - "AoS (aos.warscribe.app)"
+        - "40k (40k.warscribe.app)"
+        - "Spearhead (spearhead.warscribe.app)"
+        - "The Old World (tow.warscribe.app)"
+        - "Path to Glory (ptg.warscribe.app)"
+        - "All / General"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like?
+      description: Describe the feature or improvement
+      placeholder: "e.g. It would be great if the builder could..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Why is this useful?
+      description: How would this help your games or workflow?
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshots or mockups
+      description: Any visuals that help explain your idea
+    validations:
+      required: false

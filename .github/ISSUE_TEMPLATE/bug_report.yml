@@ -1,0 +1,74 @@
+name: Bug Report
+description: Something isn't working correctly
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: tracker
+    attributes:
+      label: Which tracker?
+      options:
+        - "AoS (aos.warscribe.app)"
+        - "40k (40k.warscribe.app)"
+        - "Spearhead (spearhead.warscribe.app)"
+        - "The Old World (tow.warscribe.app)"
+        - "Path to Glory (ptg.warscribe.app)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug
+      placeholder: "e.g. When I import my list, unit X shows 0 points..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we trigger the bug?
+      placeholder: |
+        1. Go to Import tab
+        2. Paste list
+        3. See error
+    validations:
+      required: false
+
+  - type: textarea
+    id: army-list
+    attributes:
+      label: Army list (paste here)
+      description: If the bug is related to importing or a specific army, paste your full list text here
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshots
+      description: Drag and drop any screenshots that show the issue
+    validations:
+      required: false
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Phone
+        - Tablet
+        - Desktop/Laptop
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: "e.g. Chrome, Safari, Firefox"
+    validations:
+      required: false
